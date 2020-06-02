@@ -1,0 +1,46 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field class="search-form-field">
+        <mat-icon matPrefix class="search-icon">search</mat-icon>
+        <input matInput (keyup)="applyFilter($event.target.value)" />
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort matSortDirection="asc"
+        class="mat-elevation-z2">
+        <ng-container *ngFor="let col of columnObjects" [matColumnDef]="col.columnId">
+            <th class="tableColHeader" mat-header-cell *matHeaderCellDef mat-sort-header>{{col.propertyName}} </th>
+            <td class="tableItem" mat-cell *matCellDef="let dataArray; let i = index;">
+
+                <ng-container *ngIf=" col.columnId==='option1'">
+                    <ng-container [ngTemplateOutlet]=" optionTemplateRef1"
+                        [ngTemplateOutletContext]="{ $implicit: dataArray, index: dataSource.filteredData.indexOf(dataArray) }">
+                    </ng-container>
+                </ng-container>
+
+                <ng-container *ngIf=" col.columnId==='option2'">
+                    <ng-container [ngTemplateOutlet]=" optionTemplateRef2"
+                        [ngTemplateOutletContext]="{ $implicit: dataArray, index: dataSource.filteredData.indexOf(dataArray) }">
+                    </ng-container>
+                </ng-container>
+
+                <ng-container *ngIf=" col.columnId==='option3'">
+                    <ng-container [ngTemplateOutlet]=" optionTemplateRef3"
+                        [ngTemplateOutletContext]="{ $implicit: dataArray, index: dataSource.filteredData.indexOf(dataArray) }">
+                    </ng-container>
+                </ng-container>
+
+                <ng-container
+                    *ngIf="col.columnId!=='Select' && col.columnId!=='option2' && col.columnId!=='option3' && !dataArray[col.propertyName] && dataArray[col.propertyName]!==0">
+                    {{"-"}}
+                </ng-container>
+
+                <ng-container *ngIf="col.columnId!=='Select'">
+                    {{dataArray[col.propertyName]}}
+                </ng-container>
+
+            </td>
+        </ng-container>
+        <tr class="table-col-row" mat-header-row *matHeaderRowDef="columnIds; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnIds" class="table-row"></tr>
+    </table>
+    <mat-paginator class="ngx-paginator mat-elevation-z3" [pageSizeOptions]="[7]">
+    </mat-paginator>
+</section>

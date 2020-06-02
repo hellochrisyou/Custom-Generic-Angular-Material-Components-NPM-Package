@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,47 @@
           }
         }
       }
-    }},
+    },
+    "NgxMatComponents": {
+      "projectType": "library",
+      "root": "projects/ngx-mat-components",
+      "sourceRoot": "projects/ngx-mat-components/src",
+      "prefix": "NgxMaT",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-mat-components/tsconfig.lib.json",
+            "project": "projects/ngx-mat-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-mat-components/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-mat-components/src/test.ts",
+            "tsConfig": "projects/ngx-mat-components/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-mat-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-mat-components/tsconfig.lib.json",
+              "projects/ngx-mat-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "custom-generic-angular-material-components"
 }
