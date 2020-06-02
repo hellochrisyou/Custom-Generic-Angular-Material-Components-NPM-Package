@@ -11,3 +11,12 @@
 .expansion-description {
     padding: 0 7rem 0;
 }
+.mat-expansion-panel-body {
+    padding: 0 2rem 0 !important;
+}
+.mat-expansion-panel {
+    border-radius: initial !important;
+}
+.mat-expansion-panel-header.mat-expanded:hover {
+    background-color: lightgrey;
+}

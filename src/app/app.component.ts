@@ -17,16 +17,14 @@ export class AppComponent extends NgxMatReactiveFormComponent implements OnInit 
     {
       title: 'expansion-name1',
       subTitle: 'subTitle-1',
-      description: 'descriptoin1',
+      description: 'description1',
       array: [
         {
-          select: '',
           name: 'testName1',
           team: 'testTeam1',
           points: 1
         },
         {
-          select: '',
           name: 'testName2',
           team: 'testTeam2',
           points: 2
@@ -36,16 +34,14 @@ export class AppComponent extends NgxMatReactiveFormComponent implements OnInit 
     {
       title: 'expansion-name2',
       subTitle: 'subTitle-2',
-      description: 'descriptoin2',
+      description: 'description2',
       array: [
         {
-          select: '',
           name: 'testName3',
           team: 'testTeam3',
           points: 3
         },
         {
-          select: '',
           name: 'testName4',
           team: 'testTeam4',
           points: 4
@@ -55,16 +51,14 @@ export class AppComponent extends NgxMatReactiveFormComponent implements OnInit 
     {
       title: 'expansion-name3',
       subTitle: 'subTitle-3',
-      description: 'descriptoin3',
+      description: 'description3',
       array: [
         {
-          select: '',
           name: 'testName5',
           team: 'testTeam5',
           points: 5
         },
         {
-          select: '',
           name: 'testName6',
           team: 'testTeam6',
           points: 6

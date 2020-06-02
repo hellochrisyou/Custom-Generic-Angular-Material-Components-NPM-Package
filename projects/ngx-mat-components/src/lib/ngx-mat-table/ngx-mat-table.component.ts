@@ -45,7 +45,6 @@ export class NgxMatTableComponent implements OnInit {
     public set dataArray(value: any[]) {
         this._dataArray = value;
         this.dataSource = new MatTableDataSource(this._dataArray);
-        this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
         // tslint:disable-next-line: no-string-literal
         if (!this.changeDetectorRefs['destroyed']) {
@@ -64,7 +63,6 @@ export class NgxMatTableComponent implements OnInit {
     @ContentChild('buttonTemplate1', { static: false }) optionTemplateRef1: TemplateRef<any>;
     @ContentChild('buttonTemplate2', { static: false }) optionTemplateRef2: TemplateRef<any>;
     @ContentChild('buttonTemplate3', { static: false }) optionTemplateRef3: TemplateRef<any>;
-    @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
     constructor(private changeDetectorRefs: ChangeDetectorRef,

@@ -7,22 +7,9 @@
                 <span class="expansion-description">{{expansionObj.description}}</span>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <ngx-mat-table [dataArray]="expansionObj.array" [columnObjects]="columnObjects" [colDisplay]="colDisplay">
-            <ng-template #buttonTemplate1 let-i=index>
-                <mat-icon>
-                    exit_to_app
-                </mat-icon>
-            </ng-template>
-            <ng-template #buttonTemplate2 let-i=index>
-                <mat-icon>
-                    exit_to_app
-                </mat-icon>
-            </ng-template>
-            <ng-template #buttonTemplate3 let-i=index>
-                <mat-icon>
-                    exit_to_app
-                </mat-icon>
-            </ng-template>
-        </ngx-mat-table>
+        <ng-template matExpansionPanelContent>
+            <ngx-mat-table [dataArray]="expansionObj.array" [columnObjects]="columnObjects" [colDisplay]="colDisplay">
+            </ngx-mat-table>
+        </ng-template>
     </mat-expansion-panel>
 </span>

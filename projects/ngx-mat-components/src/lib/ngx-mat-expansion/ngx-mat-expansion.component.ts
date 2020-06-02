@@ -1,12 +1,14 @@
-import { Component, OnInit, Inject, Input, ContentChild, TemplateRef, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Inject, Input, ContentChild, TemplateRef, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
 import { MatSnackBarRef, MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { ExpansionClass } from './ngx-mat-expansion.interface';
+import { NONE_TYPE } from '@angular/compiler';
 
 @Component({
     selector: 'ngx-mat-expansion',
     templateUrl: './ngx-mat-expansion.component.html',
-    styleUrls: ['./ngx-mat-expansion.component.scss']
+    styleUrls: ['./ngx-mat-expansion.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class NgxMatExpansionComponent implements OnInit {
 
@@ -57,5 +59,4 @@ export class NgxMatExpansionComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
 }

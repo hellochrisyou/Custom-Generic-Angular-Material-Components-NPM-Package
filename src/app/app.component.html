@@ -1,10 +1,5 @@
 <section>
   <ngx-mat-expansion [columnObjects]="TEST_COL_OBJ" [colDisplay]="TEST_DISPLAY" [expansionObjects]="this.testExpansion">
-    <ng-template #buttonTemplate1 let-i=index>
-      <mat-icon (click)="selectTableRow(i)">
-        exit_to_app
-      </mat-icon>
-    </ng-template>
   </ngx-mat-expansion>
 </section>
 <form class="flex-form" [formGroup]="formGroup" (ngSubmit)="submit(formGroup.value)">
