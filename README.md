@@ -1,5 +1,5 @@
 <p>
-Custom Generic Angular Material components for reusability and generic use
+Custom Generic Angular Material components for reusability and generic use. Includes: Mat-Expansion, Mat-Table, Mat-Snackbar, Mat-Dialog, and Reactive-Forms
 </p>
 <p>
 https://www.npmjs.com/package/ngx-mat-components
