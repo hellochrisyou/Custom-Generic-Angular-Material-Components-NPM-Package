@@ -1,3 +1,4 @@
+import { NgxMatSnackbarComponent } from './ngx-mat-snackbar/ngx-mat-snackbar.component';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,9 +15,16 @@ import { NgxMatExpansionComponent } from './ngx-mat-expansion/ngx-mat-expansion.
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxMatComponentsComponent } from '../public-api';
 import { NgxMatReactiveFormComponent } from './ngx-mat-reactive-form/ngx-mat-reactive-form.component';
+import { NgxMatDialogComponent } from './ngx-mat-dialog/ngx-mat-dialog.component';
 
 @NgModule({
-  declarations: [NgxMatComponentsComponent, NgxMatExpansionComponent, NgxMatReactiveFormComponent, NgxMatTableComponent],
+  declarations: [
+    NgxMatComponentsComponent,
+    NgxMatDialogComponent,
+    NgxMatSnackbarComponent,
+    NgxMatExpansionComponent,
+    NgxMatReactiveFormComponent,
+    NgxMatTableComponent],
   imports: [
     BrowserAnimationsModule,
     FormsModule,
@@ -44,8 +52,10 @@ import { NgxMatReactiveFormComponent } from './ngx-mat-reactive-form/ngx-mat-rea
     MatSortModule,
     MatTableModule,
     NgxMatComponentsComponent,
+    NgxMatDialogComponent,
     NgxMatExpansionComponent,
     NgxMatReactiveFormComponent,
+    NgxMatSnackbarComponent,
     NgxMatTableComponent,
     ReactiveFormsModule,
   ]
