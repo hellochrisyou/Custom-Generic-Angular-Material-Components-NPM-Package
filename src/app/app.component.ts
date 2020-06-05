@@ -12,7 +12,7 @@ import { NgxMatReactiveFormComponent } from 'projects/ngx-mat-components/src/lib
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent extends NgxMatReactiveFormComponent implements OnInit {
-  title = 'custom-generic-angular-material-components';
+  title = 'Custom-Generic-Angular-Material-Components';
   testExpansion: ExpansionClass[] = [
     {
       title: 'expansion-name1',
