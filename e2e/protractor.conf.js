@@ -17,7 +17,7 @@ exports.config = {
     chromeOptions: {
       args: ['--no-sandbox']
     }
-  },
+  }, 
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
