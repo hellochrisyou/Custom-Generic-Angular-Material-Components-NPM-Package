@@ -3,7 +3,8 @@ Custom Generic Angular Material components for reusability and generic use. Incl
 </p>
 <p align="center">
 https://www.npmjs.com/package/ngx-mat-components
-</p.
+</p>
+<br>
 <p align="center">
  <img  src="https://chrisyou-backup-website.s3.amazonaws.com/assets/github-preview/custom-generic-angular-material-components/CustomGenericAngularMaterialComponent.png" width="100%"/>
 </p>
